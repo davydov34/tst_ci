@@ -42,6 +42,11 @@ jobs:
           source .venv/bin/activate
           isort .
 
+      - name: Run MyPy
+        run: |
+          source .venv/bin/activate
+          mypy --explicit-package-bases .
+
       - name: Run tests
         run: |
           source .venv/bin/activate
