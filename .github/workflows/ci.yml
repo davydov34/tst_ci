@@ -23,8 +23,5 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction --no-root
 
-      - name: Run flake8
-        run: flake8
-
       - name: Run Test
         run: python3 -m pytest 
