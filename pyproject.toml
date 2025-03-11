@@ -34,7 +34,23 @@ count = true
 
 [tool.black]
 line-length = 109
-target-version = ['py37']
+target-version = ['py312']
+target-version = ['py36']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.venv
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
 
 [tool.isort]
 profile = "black"
