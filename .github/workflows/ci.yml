@@ -35,8 +35,13 @@ jobs:
       - name: Install project
         run: poetry install --no-interaction        
 
+      - name: Run black
+        run: | 
+          source .venv/bin/activate
+          black --check .
+          
+
       - name: Run tests
         run: |
           source .venv/bin/activate
           pytest
-          coverage report
