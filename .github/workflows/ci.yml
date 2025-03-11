@@ -36,7 +36,11 @@ jobs:
         run: | 
           source .venv/bin/activate
           black --check  --config pyproject.toml .
-          
+
+      - name: Run isort
+        run: |
+          source .venv/bin/activate
+          isort .
 
       - name: Run tests
         run: |
