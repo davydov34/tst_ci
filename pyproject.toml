@@ -40,13 +40,13 @@ include = '\.pyi?$'
 exclude = '''
 /(
     \.eggs
-  | \.venv
   | \.git
   | \.hg
   | \.mypy_cache
   | \.tox
   | \.venv
   | _build
+  | .venv
   | buck-out
   | build
   | dist
